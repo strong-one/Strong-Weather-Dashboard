@@ -2,4 +2,4 @@
 
 # Strong-Weather-Dashboard
 
-![Weather dashboard](images/06-server-side-apis-homework-demo.png);
+![Weather dashboard](/images/06-server-side-apis-homework-demo.png);
