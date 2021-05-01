@@ -28,16 +28,19 @@
     <!-- search form goes here, user will search for city and search history will populate below search bar-->
 
     <nav class="navbar navbar-light bg-light">
-      <form class="form-inline">
+      <form class="form-inline" id="search">
         <input
           class="form-control mr-sm-2"
           type="search"
           placeholder="Search"
           aria-label="Search"
+          id="userInput"
         />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-          Search
-        </button>
+        <input
+          class="btn btn-outline-success my-2 my-sm-0"
+          type="submit"
+          value="Search"
+        />
       </form>
     </nav>
 
