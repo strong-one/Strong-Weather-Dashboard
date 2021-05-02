@@ -164,3 +164,28 @@ var forecast = function (cityName) {
 };
 
 // save user input to local storage
+//store in local storage - understand shape and design of data
+
+// add event listener to submit btn to handle local store data
+// looking for an element with the id of search, adding event listener "click" once clicked, the function runs.
+document.querySelector("#search").addEventListener("click", function () {
+  //save information
+
+  //get user input city
+  //json is not JS readable, so parse turns in into JS readable, getting the item of the input
+  var userInput = JSON.parse(localStorage.getItem("userInput")) || [];
+
+  var userCity = document.querySelector("#userInput").value;
+  //build obj - data - what user inputs
+
+  //var localStorageArray = [];
+
+  var data = {
+    name: userCity,
+  };
+
+  //add into the info array
+  //save it - this is going to local storage, settign the input from city user inputs stringify turns JSON object (parse) to regulas JSON
+  userInput.push(userCity);
+  localStorage.setItem("userInput", JSON.stringify(userInput));
+});
