@@ -174,21 +174,19 @@ document.querySelector("#search").addEventListener("click", function (event) {
 
   //get user input city
   //json is not JS readable, so parse turns in into JS readable, getting the item of the input
-  //var userInput = JSON.parse(localStorage.getItem("userInput")) || [];
 
   var userCity = document.querySelector("#userInput").value;
   //build obj - data - what user inputs
 
-  //var localStorageArray = [];
-
-  var data = {
+  // this does not need object because there is only one input item
+  /*var data = {
     name: userCity,
-  };
+  };*/
 
   //add into the info array
   //save it - this is going to local storage, settign the input from city user inputs stringify turns JSON object (parse) to regulas JSON
-  //userInput.push(userCity);
-  localStorage.setItem("userInput", JSON.stringify(userCity));
+
   var userInput = JSON.parse(localStorage.getItem("userInput")) || [];
   userInput.push(userCity);
+  localStorage.setItem("userInput", JSON.stringify(userInput));
 });
