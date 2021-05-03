@@ -168,14 +168,14 @@ var forecast = function (cityName) {
 
 // add event listener to submit btn to handle local store data
 // looking for an element with the id of search, adding event listener "click" once clicked, the function runs.
-document.querySelector("#search").addEventListener("click", function (event) {
+document.querySelector("#search").addEventListener("click", function () {
   //save information
-  event.preventDefault();
-
+  //event.preventDefault();
   //get user input city
   //json is not JS readable, so parse turns in into JS readable, getting the item of the input
 
   var userCity = document.querySelector("#userInput").value;
+
   //build obj - data - what user inputs
 
   // this does not need object because there is only one input item
